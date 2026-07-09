@@ -1,344 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proteodynamics & Informatics Research Group</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap');
-        body {
-            font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth;
-        }
-        .bengali-text {
-            font-family: 'Noto Sans Bengali', sans-serif;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proteodynamics &amp; Informatics Research Group</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+Bengali:wght@500;600;700&family=Noto+Sans+Bengali:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-slate-50 text-slate-900 antialiased">
+<body>
 
-    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-20 items-center">
-                <a href="#" class="flex items-center">
-                    <img src="assets/pdil-logo-1.png" alt="Group Logo" class="h-14 md:h-16 w-auto object-contain">
-                </a>
-                <div class="hidden lg:flex space-x-6 text-sm font-medium text-slate-600">
-                    <a href="#about" class="hover:text-indigo-600 transition-colors">About</a>
-                    <a href="#instructors" class="hover:text-indigo-600 transition-colors">Instructors</a>
-                    <a href="#papers" class="hover:text-indigo-600 transition-colors">Recent Papers</a>
-                    <a href="#conferences" class="hover:text-indigo-600 transition-colors">Conferences</a>
-                    <a href="#posts" class="hover:text-indigo-600 transition-colors">Posts</a>
-                    <a href="#curriculum" class="hover:text-indigo-600 transition-colors">Curriculum</a>
-                </div>
-            </div>
+<svg class="ribbon-defs"><defs>
+  <linearGradient id="ribbonGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#122340"/>
+    <stop offset="50%" stop-color="#1B7A72"/>
+    <stop offset="100%" stop-color="#C4922A"/>
+  </linearGradient>
+</defs></svg>
+
+<nav class="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="brand"><span>Proteodynamics &amp; Informatics<span class="brand-dot"> Lab</span><small>Research Group</small></span></a>
+    <div class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="publications.html">Publications &amp; Conferences</a>
+      <a href="members.html">Group Members</a>
+      <a href="training.html">Training</a>
+      <a href="blog.html">Educational Blogs &amp; Posts</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+  </div>
+  <div class="wrap nav-drawer" id="navDrawer">
+    <a href="index.html" class="active">Home</a>
+    <a href="publications.html">Publications &amp; Conferences</a>
+    <a href="members.html">Group Members</a>
+    <a href="training.html">Training</a>
+    <a href="blog.html">Educational Blogs &amp; Posts</a>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <div class="page-hero-media">
+    <img src="cover-photo.png" alt="Proteodynamics & Informatics Research Group" onerror="this.src='https://images.unsplash.com/photo-1628595351029-c2bf17511435?auto=format&fit=crop&q=80&w=1400&h=700'">
+  </div>
+  <div class="page-hero-text">
+    <div class="wrap">
+      <span class="page-eyebrow">Structural Biology &middot; Computational Neuroscience</span>
+      <h1 class="page-title">Proteodynamics &amp; Informatics<br>Research Group</h1>
+    </div>
+  </div>
+</header>
+
+<section class="section reveal">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 class="section-title">About Our Group</h2>
+      <div class="title-rule"></div>
+    </div>
+    <div style="max-width:820px;">
+      <p style="font-size:15.5px;color:var(--ink-soft);line-height:1.95;margin-bottom:20px;">Structural biology has revolutionized our understanding of the molecular processes that drive life. Yet, a fundamental gap remains in our understanding of how and why proteins operate through specific dynamics, motions, and excited states. The primary objective of our research group is to decode the atomic basis of protein function &mdash; specifically, to map the structural motions that regulate the conformational transitions required for different biological functions and how a point (also known as missense) mutation affects these motions, and hence its conformational transition and a certain biological function, leading to a certain disease. In addition, our group is also interested in identifying novel compounds against different pathologies.</p>
+      <p style="font-size:15.5px;color:var(--ink-soft);line-height:1.95;margin-bottom:28px;">For this, our group harnesses in silico structural biological tools, including molecular dynamics (MD) simulations, etc., in combination with artificial intelligence (e.g., ML/DL). Additional tools we utilized include the Markov state model (MSM) for analyzing protein misfolding pathways.</p>
+      <p style="font-size:15.5px;color:var(--ink-soft);line-height:1.95;margin-bottom:22px;">Overall, our group is interested in &mdash;</p>
+      <div style="display:flex;flex-wrap:wrap;gap:9px;">
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--navy);border:1px solid var(--line);padding:6px 13px;">Protein Structural Dynamics</span>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--navy);border:1px solid var(--line);padding:6px 13px;">Missense Mutation Effects</span>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--navy);border:1px solid var(--line);padding:6px 13px;">Conformational Transitions</span>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--navy);border:1px solid var(--line);padding:6px 13px;">Molecular Dynamics Simulation</span>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--navy);border:1px solid var(--line);padding:6px 13px;">AI-Driven Drug Discovery (ML/DL)</span>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--navy);border:1px solid var(--line);padding:6px 13px;">Markov State Modeling</span>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--navy);border:1px solid var(--line);padding:6px 13px;">Novel Compound Identification</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt reveal">
+  <div class="wrap">
+    <div class="grid-3">
+      <a href="publications.html" class="card" style="text-decoration:none;">
+        <i class="fa-solid fa-book-open" style="font-size:22px;color:var(--coral);"></i>
+        <h3 style="font-size:18px;margin-top:14px;">Publications &amp; Conferences</h3>
+        <p style="font-size:13.5px;color:var(--ink-soft);margin-top:8px;">Peer-reviewed research and conference presentations from our group.</p>
+      </a>
+      <a href="members.html" class="card" style="text-decoration:none;">
+        <i class="fa-solid fa-users" style="font-size:22px;color:var(--coral);"></i>
+        <h3 style="font-size:18px;margin-top:14px;">Group Members</h3>
+        <p style="font-size:13.5px;color:var(--ink-soft);margin-top:8px;">Meet our group leaders, research fellows, and research assistants.</p>
+      </a>
+      <a href="training.html" class="card" style="text-decoration:none;">
+        <i class="fa-solid fa-chalkboard-user" style="font-size:22px;color:var(--coral);"></i>
+        <h3 style="font-size:18px;margin-top:14px;">Training</h3>
+        <p style="font-size:13.5px;color:var(--ink-soft);margin-top:8px;">Hands-on workshops in computational structural biology.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h3>Proteodynamics &amp; Informatics<br>Research Group</h3>
+        <p style="font-size:13px;max-width:320px;">Decoding the atomic basis of protein function through computational structural biology and AI-driven drug discovery.</p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="publications.html">Publications &amp; Conferences</a>
+          <a href="members.html">Group Members</a>
+          <a href="training.html">Training</a>
+          <a href="blog.html">Educational Blogs &amp; Posts</a>
         </div>
-    </nav>
-
-    <section id="about" class="py-20 bg-white border-b border-slate-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-4xl mx-auto text-center mb-12">
-                <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 mb-6">
-                    Proteodynamics & Informatics Research Group
-                </h1>
-                <p class="text-lg text-slate-600 leading-relaxed text-left mb-6">
-                    Structural biology has revolutionized our understanding of the molecular processes that drive life. Yet, a fundamental gap remains in our understanding of how and why proteins operate through specific dynamics, motions, and excited states. 
-                </p>
-                <p class="text-lg text-slate-600 leading-relaxed text-left mb-6">
-                    The primary objective of our research group is to decode the atomic basis of protein function - specifically, to map the structural motions that regulate the conformational transitions required for different biological functions and how a point (also known as missense) mutation affects these motions, and hence its conformational transition and a certain biological function, leading to a certain disease. In addition, our group is also interested in identifying novel compounds against different pathologies.
-                </p>
-                <p class="text-lg text-slate-600 leading-relaxed text-left mb-8">
-                    For this, our group harnesses in silico structural biological tools, including molecular dynamics (MD) simulations, etc., in combination with artificial intelligence (e.g., ML/DL). Additional tools we utilize include the Markov state model (MSM) for analyzing protein misfolding pathways.
-                </p>
-            </div>
-
-            <div class="bg-indigo-50 rounded-2xl p-8 max-w-4xl mx-auto border border-indigo-100">
-                <h3 class="text-xl font-bold text-indigo-900 mb-4 text-center">Our Core Research Interests</h3>
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-indigo-800 font-medium">
-                    <div class="flex items-center space-x-2"><i class="fa-solid fa-check-circle text-indigo-500"></i><span>1. Proteinopathies</span></div>
-                    <div class="flex items-center space-x-2"><i class="fa-solid fa-check-circle text-indigo-500"></i><span>2. Neurodegenerative Diseases</span></div>
-                    <div class="flex items-center space-x-2"><i class="fa-solid fa-check-circle text-indigo-500"></i><span>3. Infectious Diseases</span></div>
-                    <div class="flex items-center space-x-2 col-span-1 sm:col-span-2 md:col-span-1"><i class="fa-solid fa-check-circle text-indigo-500"></i><span>4. Protein Clearance System</span></div>
-                    <div class="flex items-center space-x-2"><i class="fa-solid fa-check-circle text-indigo-500"></i><span>5. Natural Products</span></div>
-                    <div class="flex items-center space-x-2"><i class="fa-solid fa-check-circle text-indigo-500"></i><span>6. Protein Aggregation</span></div>
-                    <div class="flex items-center space-x-2 sm:col-span-2 md:col-span-3 justify-center mt-2"><i class="fa-solid fa-check-circle text-indigo-500"></i><span>7. Liquid-liquid Phase Separation</span></div>
-                </div>
-            </div>
+      </div>
+      <div>
+        <h3>Connect</h3>
+        <div class="footer-socials">
+          <a href="https://scholar.google.com/citations?user=CwGMzPcAAAAJ&hl=en" target="_blank" title="Google Scholar"><i class="fa-brands fa-google"></i></a>
         </div>
-    </section>
+      </div>
+    </div>
+    <div class="footer-fine">&copy; 2026 Proteodynamics &amp; Informatics Research Group. All rights reserved.</div>
+  </div>
+</footer>
 
-    <section id="instructors" class="py-20 bg-slate-50 border-b border-slate-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold tracking-tight text-slate-900 mb-12 text-center">Instructors</h2>
-            
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
-                <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm flex flex-col items-center text-center lg:items-start lg:text-left hover:shadow-md transition-shadow">
-                    <div class="w-32 h-32 rounded-full overflow-hidden mb-6 border-4 border-indigo-50">
-                        <img src="assets/raju-dash.jpg" alt="Dr. Raju Dash" onerror="this.src='https://ui-avatars.com/api/?name=Raju+Dash&background=e0e7ff&color=4338ca'" class="w-full h-full object-cover">
-                    </div>
-                    <h3 class="text-2xl font-bold text-slate-900 mb-1">Raju Dash, PhD</h3>
-                    <p class="text-sm text-indigo-600 font-semibold mb-4">Postdoctoral Fellow | Computational Structural Biologist</p>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-6">
-                        Dr. Raju Dash is an accomplished structural biologist and researcher with over 13 years of specialized experience in computational structural biology. This includes computational chemistry, computer-aided drug design, and protein structural dynamics. Dr. Dash holds a Ph.D. in Medicine with a major in Anatomy from Dongguk University, South Korea. Currently, he is serving as a postdoctoral fellow at the Department of New Biology at Daegu Gyeongbuk Institute of Science and Technology (DGIST) and InnoCORE AI-CRED Institute at KAIST. He serves as an editor for several prestigious journals, including Scientific Reports, PLOS ONE, and IJMS.
-                    </p>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-6">
-                        His work is widely recognized with over 4,000 Google Scholar citations, an h-index of 33, over 110 publications in high-impact journals, and multiple Korean patents for treating neurodegenerative brain diseases. His excellence was recognized with the "Best Graduate School Academic Award 2022" at Dongguk University.
-                    </p>
-                    <a href="https://scholar.google.com/citations?user=CwGMzPcAAAAJ&hl=en" target="_blank" class="inline-flex items-center justify-center px-5 py-2.5 bg-indigo-600 text-white text-sm font-medium rounded-lg hover:bg-indigo-700 transition-colors mt-auto w-full lg:w-auto">
-                        <i class="fa-brands fa-google mr-2"></i> Visit Research Profile
-                    </a>
-                </div>
-
-                <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm flex flex-col items-center text-center lg:items-start lg:text-left hover:shadow-md transition-shadow">
-                    <div class="w-32 h-32 rounded-full overflow-hidden mb-6 border-4 border-indigo-50">
-                        <img src="assets/ma-bashar.jpeg" alt="Md. Abul Bashar" onerror="this.src='https://ui-avatars.com/api/?name=Md+Bashar&background=e0e7ff&color=4338ca'" class="w-full h-full object-cover">
-                    </div>
-                    <h3 class="text-2xl font-bold text-slate-900 mb-1">Md. Abul Bashar</h3>
-                    <p class="text-sm text-indigo-600 font-semibold mb-4">M. Pharm (Running) | Computational Structural Biologist</p>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-6">
-                        Md. Abul Bashar is an emerging computational structural biologist and researcher specializing in computer-aided drug design (CADD), molecular dynamics simulations, and structural bioinformatics. He holds a Bachelor of Pharmacy degree with high academic distinction from Islamic University, Kushtia, Bangladesh, where he is currently pursuing his Master's.
-                    </p>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-6">
-                        As an instructor, Bashar bridges theory and hands-on implementation. He possesses extensive practical experience with industry-standard computational packages, including Schrödinger Suite, PyMOL, and Unix/Linux-based analysis workflows. Working in close collaboration with international researchers, his work focuses on unraveling the pathophysiological mechanisms of neurodegenerative diseases (like ALS). He is a published author with peer-reviewed papers in high-impact journals including IJMS, Nutrients, and Current Pharmaceutical Design.
-                    </p>
-                    <a href="https://scholar.google.com/citations?hl=en&user=3_VWbiQAAAAJ" target="_blank" class="inline-flex items-center justify-center px-5 py-2.5 bg-indigo-600 text-white text-sm font-medium rounded-lg hover:bg-indigo-700 transition-colors mt-auto w-full lg:w-auto">
-                        <i class="fa-brands fa-google mr-2"></i> Visit Research Profile
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="papers" class="py-20 bg-white border-b border-slate-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold tracking-tight text-slate-900 mb-10 text-center">Recent Papers</h2>
-            
-            <div class="space-y-6">
-                <div class="p-6 bg-slate-50 rounded-xl border border-slate-200 flex flex-col md:flex-row items-start gap-6 hover:border-indigo-300 transition-colors">
-                    <div class="w-20 h-20 shrink-0 bg-white rounded-lg border border-slate-200 p-2 flex items-center justify-center">
-                        <img src="assets/cells-logo.png" alt="Cells Logo" class="max-w-full max-h-full object-contain">
-                    </div>
-                    <div>
-                        <p class="text-sm font-semibold text-slate-900 mb-1">Dash R, Tran NN, Lee SB, Lee BH.</p>
-                        <h3 class="text-lg font-bold text-indigo-700 mb-2">Structural Dynamics Analysis of USP14 Activation by AKT-Mediated Phosphorylation</h3>
-                        <p class="text-sm text-slate-600 mb-2"><em>Cells.</em> 2024, May 31; 13(11): 955. <span class="font-medium">IF: 6.0. JCR: Q1.</span></p>
-                        <a href="https://www.mdpi.com/2073-4409/13/11/955" target="_blank" class="text-xs text-blue-600 hover:underline">DOI Link &rarr;</a>
-                    </div>
-                </div>
-
-                <div class="p-6 bg-slate-50 rounded-xl border border-slate-200 flex flex-col md:flex-row items-start gap-6 hover:border-indigo-300 transition-colors">
-                    <div class="w-20 h-20 shrink-0 bg-white rounded-lg border border-slate-200 p-2 flex items-center justify-center">
-                        <img src="assets/ijms-logo.png" alt="IJMS Logo" class="max-w-full max-h-full object-contain">
-                    </div>
-                    <div>
-                        <p class="text-sm font-semibold text-slate-900 mb-1">Bashar MA, Dash N, Mitra S, Dash R*.</p>
-                        <h3 class="text-lg font-bold text-indigo-700 mb-2">Disclosing Pathogenic Variant Effects on the Structural Dynamics of the VAPB MSP Domain Causing Familial ALS</h3>
-                        <p class="text-sm text-slate-600 mb-2"><em>International Journal of Molecular Sciences.</em> 2025, Jul 5; 26(13): 6489. <span class="font-medium">IF: 4.9. JCR: Q1.</span></p>
-                        <a href="https://doi.org/10.3390/ijms26136489" target="_blank" class="text-xs text-blue-600 hover:underline">DOI Link &rarr;</a>
-                    </div>
-                </div>
-
-                <div class="p-6 bg-slate-50 rounded-xl border border-slate-200 flex flex-col md:flex-row items-start gap-6 hover:border-indigo-300 transition-colors">
-                    <div class="w-20 h-20 shrink-0 bg-white rounded-lg border border-slate-200 p-2 flex items-center justify-center">
-                        <img src="assets/sci-reports-logo.png" alt="Scientific Reports Logo" class="max-w-full max-h-full object-contain">
-                    </div>
-                    <div>
-                        <p class="text-sm font-semibold text-slate-900 mb-1">Dash R, Munni YA, Mitra S, Choi HJ, Jahan SI, Chowdhury A, Jang TJ, Moon IS*.</p>
-                        <h3 class="text-lg font-bold text-indigo-700 mb-2">Dynamic insights into the effects of nonsynonymous polymorphisms (nsSNPs) on loss of TREM2 function</h3>
-                        <p class="text-sm text-slate-600 mb-2"><em>Scientific Reports.</em> 2022, Jun 07; 12: 9378. <span class="font-medium">IF: 4.9. JCR: Q1.</span></p>
-                        <a href="https://www.nature.com/articles/s41598-022-13120-5" target="_blank" class="text-xs text-blue-600 hover:underline">DOI Link &rarr;</a>
-                    </div>
-                </div>
-
-                <div class="p-6 bg-slate-50 rounded-xl border border-slate-200 flex flex-col md:flex-row items-start gap-6 hover:border-indigo-300 transition-colors">
-                    <div class="w-20 h-20 shrink-0 bg-white rounded-lg border border-slate-200 p-2 flex items-center justify-center">
-                        <img src="assets/ijms-logo.png" alt="IJMS Logo" class="max-w-full max-h-full object-contain">
-                    </div>
-                    <div>
-                        <p class="text-sm font-semibold text-slate-900 mb-1">Dash R, Mitra S, Dash N, Barua L, Mazumder K, Moon IS*.</p>
-                        <h3 class="text-lg font-bold text-indigo-700 mb-2">Bacopa monnieri Promotes Neuronal Development by Regulating the Neurotrophin Signaling Pathway</h3>
-                        <p class="text-sm text-slate-600 mb-2"><em>International Journal of Molecular Sciences.</em> 2026 Mar 27; 27(7): 3048. <span class="font-medium">IF: 4.9. JCR: Q1.</span></p>
-                        <a href="https://www.mdpi.com/1422-0067/27/7/3048" target="_blank" class="text-xs text-blue-600 hover:underline">DOI Link &rarr;</a>
-                    </div>
-                </div>
-
-                <div class="p-6 bg-slate-50 rounded-xl border border-slate-200 flex flex-col md:flex-row items-start gap-6 hover:border-indigo-300 transition-colors">
-                    <div class="w-20 h-20 shrink-0 bg-white rounded-lg border border-slate-200 p-2 flex items-center justify-center">
-                        <img src="assets/biorxiv-logo.jpg" alt="bioRxiv Logo" class="max-w-full max-h-full object-contain">
-                    </div>
-                    <div>
-                        <p class="text-sm font-semibold text-slate-900 mb-1">Rahim ZB, Bashar MA, Dash N, Paul S, Ziad R, Mitra S, Dash R*.</p>
-                        <h3 class="text-lg font-bold text-indigo-700 mb-2">Unraveling the distinct motion bias of TrkA-NGF complex in NGFR100W-driven HSAN V disease</h3>
-                        <p class="text-sm text-slate-600 mb-2"><em>bioRxiv.</em> 2025 Feb. [Equal Contribution].</p>
-                        <a href="https://www.biorxiv.org/content/10.1101/2025.02.27.640519v1" target="_blank" class="text-xs text-blue-600 hover:underline">DOI Link &rarr;</a>
-                    </div>
-                </div>
-
-                <div class="p-6 bg-slate-50 rounded-xl border border-slate-200 flex flex-col md:flex-row items-start gap-6 hover:border-indigo-300 transition-colors">
-                    <div class="w-20 h-20 shrink-0 bg-white rounded-lg border border-slate-200 p-2 flex items-center justify-center">
-                        <img src="assets/cpd-logo.jpg" alt="CPD Logo" class="max-w-full max-h-full object-contain">
-                    </div>
-                    <div>
-                        <p class="text-sm font-semibold text-slate-900 mb-1">Bashar MA, Hossain MA, Kavey MRH, Shazib R, Islam MS, Ansari SA, Rahman MH*.</p>
-                        <h3 class="text-lg font-bold text-indigo-700 mb-2">Network pharmacology and in silico elucidation of phytochemicals extracted from Ajwa dates to inhibit Akt and PI3K causing TNBC</h3>
-                        <p class="text-sm text-slate-600 mb-2"><em>Current Pharmaceutical Design.</em> 2024 Jun 7; 12(1):1-7. <span class="font-medium">IF: 2.6. JCR: Q2.</span></p>
-                        <a href="http://dx.doi.org/10.2174/0113816128348876241017101729" target="_blank" class="text-xs text-blue-600 hover:underline">DOI Link &rarr;</a>
-                    </div>
-                </div>
-
-                <div class="p-6 bg-slate-50 rounded-xl border border-slate-200 flex flex-col md:flex-row items-start gap-6 hover:border-indigo-300 transition-colors">
-                    <div class="w-20 h-20 shrink-0 bg-white rounded-lg border border-slate-200 p-2 flex items-center justify-center">
-                        <img src="assets/app-sci-logo.jpg" alt="Applied Sciences Logo" class="max-w-full max-h-full object-contain">
-                    </div>
-                    <div>
-                        <p class="text-sm font-semibold text-slate-900 mb-1">Dash N, Bashar MA, Lee J, Dash R*.</p>
-                        <h3 class="text-lg font-bold text-indigo-700 mb-2">Identification of Novel Biomarkers in Huntington’s Disease Based on Differential Gene Expression Meta-Analysis and Machine Learning Approach</h3>
-                        <p class="text-sm text-slate-600 mb-2"><em>Applied Sciences.</em> 2025 Jul 25; 15(15): 8286. <span class="font-medium">IF: 2.5, JCR: Q2.</span></p>
-                        <a href="https://doi.org/10.3390/app15158286" target="_blank" class="text-xs text-blue-600 hover:underline">DOI Link &rarr;</a>
-                    </div>
-                </div>
-
-                <div class="p-6 bg-slate-50 rounded-xl border border-slate-200 flex flex-col md:flex-row items-start gap-6 hover:border-indigo-300 transition-colors">
-                    <div class="w-20 h-20 shrink-0 bg-white rounded-lg border border-slate-200 p-2 flex items-center justify-center">
-                        <img src="assets/nutrients-logo.png" alt="Nutrients Logo" class="max-w-full max-h-full object-contain">
-                    </div>
-                    <div>
-                        <p class="text-sm font-semibold text-slate-900 mb-1">Mitra S*, Dash R, Bashar MA, Mazumder K, Moon IS*.</p>
-                        <h3 class="text-lg font-bold text-indigo-700 mb-2">Neuroprotective and Neurotrophic Potential of Flammulina velutipes Extracts in Primary Hippocampal Neuronal Culture</h3>
-                        <p class="text-sm text-slate-600 mb-2"><em>Nutrients.</em> 2025 Sep; 17(19):3107. [Equal Contribution]. <span class="font-medium">IF: 5.0. JCR: Q1.</span></p>
-                        <a href="https://doi.org/10.3390/nu17193107" target="_blank" class="text-xs text-blue-600 hover:underline">DOI Link &rarr;</a>
-                    </div>
-                </div>
-
-                <div class="p-6 bg-slate-50 rounded-xl border border-slate-200 flex flex-col md:flex-row items-start gap-6 hover:border-indigo-300 transition-colors">
-                    <div class="w-20 h-20 shrink-0 bg-white rounded-lg border border-slate-200 p-2 flex items-center justify-center">
-                        <img src="assets/prp-logo.png" alt="PRP Logo" class="max-w-full max-h-full object-contain">
-                    </div>
-                    <div>
-                        <p class="text-sm font-semibold text-slate-900 mb-1">Hoque N, Tipu MTR, Bashar MA, Dash R, et al.</p>
-                        <h3 class="text-lg font-bold text-indigo-700 mb-2">Investigating the Phytochemical Constituents, Anti-Inflammatory, and Neuropharmacological Activities of Podocarpus neriifolius Leaves</h3>
-                        <p class="text-sm text-slate-600 mb-2"><em>Pharmacology Research & Perspectives.</em> 2026 Jun 02; 14(3): e70272. <span class="font-medium">IF: 2.3. JCR: Q2.</span></p>
-                        <a href="https://doi.org/10.1002/prp2.70272" target="_blank" class="text-xs text-blue-600 hover:underline">DOI Link &rarr;</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="mt-8 text-center">
-                <p class="text-sm text-slate-600">For all published articles, please explore Dr. Dash's Google Scholar Profile:</p>
-                <a href="https://scholar.google.com/citations?user=CwGMzPcAAAAJ&hl=en" target="_blank" class="inline-block mt-2 font-semibold text-indigo-600 hover:text-indigo-800 transition-colors">Google Scholar &rarr;</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="conferences" class="py-20 bg-slate-900 text-white border-b border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold tracking-tight mb-10 text-center">Conference Poster Presentations</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-slate-800 rounded-xl p-6 border border-slate-700 flex flex-col items-start gap-4">
-                    <div class="h-12 w-32 bg-white rounded p-1 mb-2 flex items-center justify-center">
-                        <img src="assets/iybc-logo.png" alt="NYBB Logo" class="max-w-full max-h-full object-contain">
-                    </div>
-                    <h3 class="text-lg font-bold text-indigo-300">Insights into the Pathophysiological Mechanisms of TBK1 E696K Mutation in Amyotrophic Lateral Sclerosis</h3>
-                    <p class="text-sm text-slate-300 mb-2">Bashar MA, Rafi RI, Mitra S, Sarkar AP*, Dash R*.</p>
-                    <div class="mt-auto pt-4 border-t border-slate-700 w-full text-sm text-slate-400">
-                        <p><i class="fa-solid fa-location-dot mr-2"></i> 6th International Young Biotechnologist Congress 2026. Nabab Nawab Ali Chowdhury Senate Bhaban, University of Dhaka, Bangladesh.</p>
-                        <p class="mt-2 text-indigo-400 font-semibold">Presenter: Bashar MA</p>
-                    </div>
-                </div>
-
-                <div class="bg-slate-800 rounded-xl p-6 border border-slate-700 flex flex-col items-start gap-4">
-                    <div class="h-12 w-32 bg-white rounded p-1 mb-2 flex items-center justify-center">
-                        <img src="assets/iybc-logo.png" alt="NYBB Logo" class="max-w-full max-h-full object-contain">
-                    </div>
-                    <h3 class="text-lg font-bold text-indigo-300">Deciphering NGF mutation-induced biased activation of the NGF-TrkA complex using molecular dynamics simulation</h3>
-                    <p class="text-sm text-slate-300 mb-2">Rafi RI, Murad WBA, Dash N, Bashar MA, Barua L, Mitra S*, Dash R*.</p>
-                    <div class="mt-auto pt-4 border-t border-slate-700 w-full text-sm text-slate-400">
-                        <p><i class="fa-solid fa-location-dot mr-2"></i> 6th International Young Biotechnologist Congress 2026. Nabab Nawab Ali Chowdhury Senate Bhaban, University of Dhaka, Bangladesh.</p>
-                        <p class="mt-2 text-indigo-400 font-semibold">Presenter: Rafi RI</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="posts" class="py-20 bg-slate-50 border-b border-slate-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold tracking-tight text-slate-900 mb-10 text-center">Blog & Educational Posts</h2>
-            <p class="text-center text-slate-600 mb-8">Click on any post to read the full article.</p>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <a href="post-1.html" class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm flex flex-col hover:shadow-lg transition-all transform hover:-translate-y-1 group">
-                    <img src="assets/Post-1.png" alt="Post 1 Cover" class="w-full h-48 object-cover group-hover:opacity-90 transition-opacity">
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="text-lg font-bold text-slate-900 group-hover:text-indigo-700 mb-4 bengali-text leading-snug transition-colors">
-                            "কম্পিউটারে কি আর গবেষণা হয়?" — যারা বায়োইনফরমেটিক্সকে অবহেলা করেন, তারা কি উন্নত বিশ্বের এই সত্যগুলো জানেন?
-                        </h3>
-                        <span class="mt-auto text-sm font-semibold text-indigo-600 flex items-center">
-                            Read Full Post <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
-                        </span>
-                    </div>
-                </a>
-
-                <a href="post-2.html" class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm flex flex-col hover:shadow-lg transition-all transform hover:-translate-y-1 group">
-                    <img src="assets/Post-2.png" alt="Post 2 Cover" class="w-full h-48 object-cover group-hover:opacity-90 transition-opacity">
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="text-lg font-bold text-slate-900 group-hover:text-indigo-700 mb-4 bengali-text leading-snug transition-colors">
-                            ওয়েট ল্যাব বনাম ড্রাইড ল্যাব: বায়োইনফরমেটিক্স কি আসলেই 'অনির্ভরযোগ্য', নাকি বর্তমান গবেষণার মূল চালিকাশক্তি?
-                        </h3>
-                        <span class="mt-auto text-sm font-semibold text-indigo-600 flex items-center">
-                            Read Full Post <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
-                        </span>
-                    </div>
-                </a>
-
-                <a href="post-3.html" class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm flex flex-col hover:shadow-lg transition-all transform hover:-translate-y-1 group">
-                    <img src="assets/Post-3.png" alt="Post 3 Cover" class="w-full h-48 object-cover group-hover:opacity-90 transition-opacity">
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="text-lg font-bold text-slate-900 group-hover:text-indigo-700 mb-4 bengali-text leading-snug transition-colors">
-                            বায়োইনফরমেটিক্স কি আসলেই 'অনুমান নির্ভর'? আসুন বিজ্ঞান ও গণিতের চোখে সত্যটা জানি
-                        </h3>
-                        <span class="mt-auto text-sm font-semibold text-indigo-600 flex items-center">
-                            Read Full Post <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
-                        </span>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section id="curriculum" class="py-20 bg-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold tracking-tight text-slate-900 mb-10 text-center">Course Curriculum</h2>
-            
-            <div class="space-y-4">
-                <div class="bg-indigo-50 border-l-4 border-indigo-500 p-6 rounded-r-lg shadow-sm">
-                    <h3 class="text-xl font-bold text-indigo-900 mb-2">Day-1</h3>
-                    <p class="text-slate-700">Introduction to Computational/In silico Biology.</p>
-                </div>
-                <div class="bg-indigo-50 border-l-4 border-indigo-500 p-6 rounded-r-lg shadow-sm">
-                    <h3 class="text-xl font-bold text-indigo-900 mb-2">Day-2</h3>
-                    <p class="text-slate-700">Relevant concepts regarding Molecular docking and Pharmacokinetics Profiling of drugs. E.g., Protein, Ligand, Enzyme, Protein Structure Modeling and Preparation, Ligand Preparation, Molecular Docking, and Pharmacokinetics Properties of Ligands.</p>
-                </div>
-                <div class="bg-indigo-50 border-l-4 border-indigo-500 p-6 rounded-r-lg shadow-sm">
-                    <h3 class="text-xl font-bold text-indigo-900 mb-2">Day-3 & 4</h3>
-                    <p class="text-slate-700">Fundamental concepts of molecular dynamics simulation, MD Simulation System setup, Production Run and Trajectory quality checking, Trajectory Analysis (RMSD, RG, SASA, RMSF, eRMSF, PCA, DCCM, FEL, DSSP, Interaction Analysis).</p>
-                </div>
-                <div class="bg-indigo-50 border-l-4 border-indigo-500 p-6 rounded-r-lg shadow-sm">
-                    <h3 class="text-xl font-bold text-indigo-900 mb-2">Day-5</h3>
-                    <p class="text-slate-700">Identification of Research Gap from wet-lab papers, Designing a project and common mistakes during designing, High-quality Figure preparation, Manuscript Writing, and Journal Submission.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="bg-slate-900 text-slate-400 py-8 border-t border-slate-800 text-center">
-        <div class="max-w-7xl mx-auto px-4">
-            <p class="text-sm">&copy; 2026 Proteodynamics & Informatics Research Group. All rights reserved.</p>
-        </div>
-    </footer>
-
+<script src="app.js"></script>
 </body>
 </html>
